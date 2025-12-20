@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Date Invite</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+
+  <!-- SCREEN 1 -->
+  <div id="screen1" class="screen active">
+    <h1>Would you like to hang out with me sometime?</h1>
+    <button onclick="goYes()">Yes</button>
+    <button onclick="goNo()">No</button>
+  </div>
+
+  <!-- SCREEN 2 (DATE) -->
+  <div id="screenDate" class="screen">
+    <h2>When would you prefer?</h2>
+
+    <!-- FIXED DATES → AUTO NEXT -->
+    <button onclick="pickDate('25 Dec')">25 Dec</button>
+    <button onclick="pickDate('29 Dec')">29 Dec</button>
+    <button onclick="pickDate('5 Jan')">5 Jan</button>
+
+    <br><br>
+
+    <!-- CUSTOM DATE -->
+    <input id="otherDate" placeholder="Any other date?" />
+    <br><br>
+    <button onclick="customDateNext()">Next</button>
+  </div>
+
+  <!-- SCREEN 3 (PLACE) -->
+  <div id="screenPlace" class="screen">
+    <h2>Where would you like to go?</h2>
+    <input id="placeInput" placeholder="Coffee, walk, dinner…" />
+    <br><br>
+    <button onclick="submitFinal()">Next</button>
+  </div>
+
+  <!-- SCREEN NO -->
+  <div id="screenNo" class="screen">
+    <h2>That's completely okay 🤍</h2>
+    <input placeholder="If you want, tell me why (optional)" />
+    <br><br>
+    <button onclick="submitFinal()">Submit</button>
+  </div>
+
+  <!-- FINAL -->
+  <<div id="screenFinal" class="screen">
+  <h2>✨ Thank you ✨</h2>
+
+  <!-- response show hoga yahan -->
+  <div id="finalResponse" class="final-response"></div>
+
+  <p class="final-note">
+    Thank you for taking a moment to be here.
+    Whatever your answer was, I really appreciate your honesty and time.
+  </p>
+
+  <!-- ACTION BUTTONS -->
+  <div class="final-actions">
+    <button class="btn-copy" onclick="copyResponse()">Copy my response</button>
+    <button class="btn-whatsapp" onclick="shareWhatsApp()">Share on WhatsApp</button>
+  </div>
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
